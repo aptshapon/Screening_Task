@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="row">
+            <div class="col-md-9">
+            <a href="{% url 'dashboard' %}">Back to dashboard</a>
+                <h3>Technology Product List</h3>
+            </div>
+            <div class="col-md-3">
+                <!-- Controls -->
+            </div>
+        </div>
+
+        <!-- Wrapper for slides -->
+        {% for product in products %}
+
+        <div class="carousel-inner">
+          <div class="item active">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="col-item">
+                    <div class="photo">
+                        <img src="{{ product.image.url }}" class="img-responsive" alt="a" />
+                    </div>
+                    <div class="info">
+                        <div class="row">
+                            <div class="price col">
+                                <h5>
+                                    {{ product.name }}</h5>
+                                <h5 class="price-text-color">
+                                    ${{ product.price }}</h5>
+                                    <p>{{ product.description }}</p>
+                            </div>
+                        </div>
+                        <div class="clearfix">
+                        </div>
+                    </div>
+                </div>
+              </div>
+          </div>
+        </div>
+        {% endfor %}
+        <!-- Wrapper for slides -->
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
