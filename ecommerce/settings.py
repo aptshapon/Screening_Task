@@ -26,7 +26,7 @@ SECRET_KEY = 'i@j7c$wc^d&589($)gvr5(15z!7x$rm#wz*r07_*zom_+vx^#&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['screening-auth.herokuapp.com']
 
 
 # Application definition
